@@ -1,8 +1,0 @@
-FROM ubuntu:latest
-RUN apt update && apt upgrade && apt install python3-pip \
-&& pip install websockets
-ENV DEBIAN_FRONTEND=noninteractive
-COPY /mnt/server.py /
-CMD ["python3", "/server.py"]
-EXPOSE 5678
-
