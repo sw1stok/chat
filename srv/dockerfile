@@ -1,6 +1,6 @@
 FROM ubuntu:latest
-RUN apt update && apt upgrade -y && apt install -y python && apt install -y python-pip \
-&& pip install websockets
+RUN apt update && apt upgrade -y && apt install -y python3 && apt install -y python3-pip \
+&& pip3 install websockets
 ENV DEBIAN_FRONTEND=noninteractive
 COPY ./server.py /
 CMD ["python3", "/server.py"]
