@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-RUN apt update && apt upgrade -y && apt install python-pip -y \
+RUN apt update && apt upgrade -y && apt install -y python && apt install -y python-pip \
 && pip install websockets
 ENV DEBIAN_FRONTEND=noninteractive
 COPY ./server.py /
