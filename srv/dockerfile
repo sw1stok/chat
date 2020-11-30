@@ -2,7 +2,7 @@ FROM ubuntu:latest
 RUN apt update && apt upgrade -y && apt install python3-pip -y \
 && pip install websockets
 ENV DEBIAN_FRONTEND=noninteractive
-COPY /mnt/server.py /
+COPY ./server.py /
 CMD ["python3", "/server.py"]
 EXPOSE 5678
 
